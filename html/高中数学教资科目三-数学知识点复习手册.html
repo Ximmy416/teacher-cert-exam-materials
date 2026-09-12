@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高中数学教师资格证 · 科目三 数学知识点复习手册</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  :root{
+    --accent:#1f4e79; --accent2:#2e75b6; --bg:#f7f9fc;
+    --border:#d7e0ea; --what:#eef4fb; --how:#fff8e6; --ans:#e9f7ef;
+  }
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",Segoe UI,sans-serif;
+       color:#1c2733; line-height:1.75; margin:0; background:#fff;}
+  .wrap{max-width:920px; margin:0 auto; padding:32px 28px 80px;}
+  header{background:linear-gradient(135deg,#1f4e79,#2e75b6); color:#fff; padding:36px 28px;}
+  header h1{margin:0 0 8px; font-size:26px;}
+  header p{margin:2px 0; opacity:.92; font-size:14px;}
+  h2.part{font-size:22px; margin:44px 0 8px; padding:10px 14px; color:#fff;
+          background:var(--accent); border-radius:6px;}
+  h2.part small{font-weight:400; font-size:13px; opacity:.85; margin-left:8px;}
+  h3.kp{font-size:18px; margin:30px 0 6px; color:var(--accent);
+        border-bottom:2px solid var(--accent2); padding-bottom:4px;}
+  h3.kp .num{display:inline-block; background:var(--accent2); color:#fff;
+        width:26px; height:26px; line-height:26px; text-align:center; border-radius:50%; font-size:14px; margin-right:8px;}
+  .block{border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:10px 0;}
+  .what{background:var(--what)}
+  .how{background:var(--how)}
+  .example{background:#fbfbfd; border-left:4px solid var(--accent2)}
+  .ans{background:var(--ans); border-left:4px solid #2e9e5b}
+  .lbl{font-weight:700; color:var(--accent);}
+  .tag{display:inline-block; font-size:11px; padding:1px 7px; border-radius:10px;
+       background:#e3eaf2; color:#34506b; margin-left:6px; vertical-align:1px;}
+  .tag.zt{background:#e9f7ef; color:#1e6b3c}
+  .badge{display:inline-block; font-size:12px; font-weight:600; padding:2px 10px;
+         border-radius:12px; margin-left:8px; vertical-align:2px;}
+  .badge.p0{background:#e74c3c; color:#fff}
+  .badge.p1{background:#e67e22; color:#fff}
+  .toc{background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:16px 22px;}
+  .toc h2{margin:0 0 8px; font-size:18px; color:var(--accent);}
+  .toc ul{list-style:none; padding-left:6px; margin:6px 0;}
+  .toc li{margin:4px 0;}
+  .toc a{color:var(--accent2); text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+  .toc .part-name{font-weight:700; color:#1c2733; margin-top:10px;}
+  .note{font-size:13px; color:#6b7785; background:#f4f6f8; padding:10px 14px;
+        border-radius:6px; margin:16px 0;}
+  .legend{font-size:13px; background:#fdf3f2; border:1px solid #f5c6c6; padding:10px 14px; border-radius:6px; margin:12px 0;}
+  @media print{
+    header{background:#fff; color:#000; padding:0;}
+    h2.part{background:#eee; color:#000;}
+    body{font-size:12px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>高中数学教师资格证 · 科目三《数学学科知识与教学能力》</h1>
+  <p>数学计算类知识点复习手册（对齐大纲，按大类组织，标注优先级）</p>
+  <p>范围：大学数学（线性代数 / 高等数学 / 概率统计 / 向量）+ 高中数学补充</p>
+</header>
+<div class="wrap">
+
+<div class="legend">
+  <b>优先级说明：</b>
+  <span class="badge p0">必考</span>＝大纲点名 / 真题高频，优先掌握；
+  <span class="badge p1">扩展</span>＝大纲未点名，但真题偶见或属超纲，时间紧可后置。
+</div>
+
+<div class="note">
+  说明：① 科目三计算题主要考<b>大学数学</b>；② 例题以<b>历年真题题型</b>为准，缺漏用<b>同难度典型题</b>补齐并标注；③ 公式由 MathJax 渲染，需联网查看；④ 按真题考情取舍：已移除"反常积分"；"二次型""空间解析几何"等据你的真题反馈补入第四部分。
+</div>
+
+<nav class="toc" id="toc">
+  <h2>目录</h2>
+  <div class="part-name">第一部分 · 大学数学</div>
+  <ul>
+    <li><b>大类一 · 线性代数</b>
+      <ul>
+        <li><a href="#x1">1. 行列式</a></li>
+        <li><a href="#x2">2. 矩阵及其运算</a></li>
+        <li><a href="#x3">3. 伴随矩阵与逆矩阵</a></li>
+        <li><a href="#x4">4. 矩阵的秩</a></li>
+        <li><a href="#x5">5. 向量组的线性相关性</a></li>
+        <li><a href="#x6">6. 线性方程组</a></li>
+        <li><a href="#x7">7. 特征值与特征向量</a></li>
+        <li><a href="#x8">8. 多项式</a></li>
+        <li><a href="#x9">9. 线性空间与线性变换</a></li>
+      </ul>
+    </li>
+    <li><b>大类二 · 高等数学</b>
+      <ul>
+        <li><a href="#g1">1. 极限与连续</a></li>
+        <li><a href="#g2">2. 导数与微分</a></li>
+        <li><a href="#g3">3. 中值定理、泰勒公式与导数应用</a></li>
+        <li><a href="#g4">4. 不定积分</a></li>
+        <li><a href="#g5">5. 定积分</a></li>
+        <li><a href="#g6">6. 无穷级数</a></li>
+        <li><a href="#g7">7. 傅里叶级数</a></li>
+        <li><a href="#g8">8. 常微分方程</a></li>
+        <li><a href="#g9">9. 多元函数微积分</a></li>
+      </ul>
+    </li>
+    <li><b>大类三 · 概率论与数理统计</b>
+      <ul>
+        <li><a href="#p1">1. 随机事件与概率</a></li>
+        <li><a href="#p2">2. 一维随机变量及其分布</a></li>
+        <li><a href="#p3">3. 二维随机变量</a></li>
+        <li><a href="#p4">4. 数字特征</a></li>
+        <li><a href="#p5">5. 大数定律与中心极限定理</a></li>
+        <li><a href="#p6">6. 参数估计与假设检验</a></li>
+      </ul>
+    </li>
+    <li><b>大类四 · 向量</b>
+      <ul>
+        <li><a href="#v1">1. 向量代数</a></li>
+      </ul>
+    </li>
+  </ul>
+  <div class="part-name">第二部分 · 高中数学补充</div>
+  <ul>
+    <li><a href="#h1">1. 函数</a></li>
+    <li><a href="#h2">2. 数列</a></li>
+    <li><a href="#h3">3. 三角函数</a></li>
+    <li><a href="#h4">4. 平面向量</a></li>
+    <li><a href="#h5">5. 不等式</a></li>
+    <li><a href="#h6">6. 立体几何</a></li>
+    <li><a href="#h7">7. 解析几何（圆锥曲线）</a></li>
+    <li><a href="#h8">8. 复数</a></li>
+    <li><a href="#h9">9. 导数初步（高中）</a></li>
+    <li><a href="#h10">10. 概率统计（高中）</a></li>
+  </ul>
+  <div class="part-name">第三部分 · 高频推论与小结论速查</div>
+  <ul>
+    <li><a href="#c1">一、线性代数推论</a></li>
+    <li><a href="#c2">二、高等数学推论</a></li>
+    <li><a href="#c3">三、概率统计推论</a></li>
+  </ul>
+  <div class="part-name">第四部分 · 补充专题</div>
+  <ul>
+    <li><a href="#s1">1. 计数原理（排列组合与二项式定理）</a></li>
+    <li><a href="#s2">2. 幂级数收敛域的计算</a></li>
+    <li><a href="#s3">3. 二次型的概念</a></li>
+    <li><a href="#s4">4. 立体几何与解析几何</a></li>
+  </ul>
+</nav>
+
+<h2 class="part">第一部分 · 大学数学</h2>
+
+<h2 class="part" id="part1">大类一 · 线性代数</h2>
+
+<h3 class="kp" id="x1"><span class="num">1</span>行列式<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　$n$ 阶方阵 $A=(a_{ij})_{n\times n}$ 的行列式记为 $|A|$ 或 $\det A$，是一个<b>数</b>：
+  $$|A|=\sum_{j_1\cdots j_n}(-1)^{\tau(j_1\cdots j_n)}\,a_{1j_1}a_{2j_2}\cdots a_{nj_n}$$
+  其中 $\tau$ 是列下标排列的逆序数。$2$ 阶 $\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc$。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>
+  <ul>
+    <li><b>化三角形法</b>：用行（列）初等变换化为上三角，值 = 主对角线元素乘积；</li>
+    <li><b>按行（列）展开</b>：$|A|=\sum_{j}a_{ij}A_{ij}$（$A_{ij}$ 为代数余子式）；</li>
+    <li><b>关键性质</b>：$|A^T|=|A|$；互换两行变号；某行公因子可提出；某行加到另一行不变；某行全 0 或两行成比例 $\Rightarrow |A|=0$；$|AB|=|A||B|$，$|kA|=k^n|A|$。</li>
+    <li><b>范德蒙德行列式</b>：
+    $$\begin{vmatrix}1&1&\cdots&1\\x_1&x_2&\cdots&x_n\\\vdots&\vdots&&\vdots\\x_1^{n-1}&x_2^{n-1}&\cdots&x_n^{n-1}\end{vmatrix}=\prod_{1\le i&lt;j\le n}(x_j-x_i)$$</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　计算三阶范德蒙德行列式
+  $$V=\begin{vmatrix}1&1&1\\1&2&3\\1&4&9\end{vmatrix}$$
+  <div class="ans"><span class="lbl">答案</span>　$V=(2-1)(3-1)(3-2)=1\cdot 2\cdot 1=2$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　用行变换计算 $D=\begin{vmatrix}1&2&3\\2&5&9\\3&8&18\end{vmatrix}$
+  <div class="ans"><span class="lbl">答案</span>　$r_2-2r_1,\ r_3-3r_1$ 得 $\begin{vmatrix}1&2&3\\0&1&3\\0&2&9\end{vmatrix}$，按第一列展开 $=1\cdot\begin{vmatrix}1&3\\2&9\end{vmatrix}=9-6=3$。</div>
+</div>
+
+<h3 class="kp" id="x2"><span class="num">2</span>矩阵及其运算<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　$m\times n$ 矩阵是排成矩形的数表。运算有：加法、数乘、<b>乘法</b>、转置、方阵的幂。乘法 $C_{m\times s}=A_{m\times n}B_{n\times s}$，其中 $c_{ij}=\sum_{k=1}^{n}a_{ik}b_{kj}$（要求 $A$ 的列数 $=$ $B$ 的行数）。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 性质</span>
+  <ul>
+    <li>矩阵乘法<b>不满足交换律</b>：一般 $AB\ne BA$；不满足消去律（$AB=0$ 不一定 $A=0$ 或 $B=0$）；</li>
+    <li>$(AB)^T=B^TA^T$；$(AB)^{-1}=B^{-1}A^{-1}$（可逆时）；</li>
+    <li>方阵时 $|AB|=|A||B|$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　设 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，$B=\begin{pmatrix}2&0\\1&-1\end{pmatrix}$，求 $AB$ 与 $BA$，并说明乘法不交换。
+  <div class="ans"><span class="lbl">答案</span>
+  $$AB=\begin{pmatrix}4&-2\\10&-4\end{pmatrix},\qquad BA=\begin{pmatrix}2&4\\-2&-2\end{pmatrix}$$
+  $AB\ne BA$，故矩阵乘法不满足交换律。</div>
+</div>
+
+<h3 class="kp" id="x3"><span class="num">3</span>伴随矩阵与逆矩阵<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>
+  <ul>
+    <li><b>伴随矩阵</b> $A^*$：由各元素代数余子式 $A_{ij}$ 构成的矩阵的<b>转置</b>，即 $A^*=(A_{ji})$。核心恒等式：$AA^*=A^*A=|A|E$。</li>
+    <li><b>逆矩阵</b> $A^{-1}$：若 $|A|\ne0$，则 $A^{-1}=\dfrac{1}{|A|}A^*$，满足 $AA^{-1}=A^{-1}A=E$。</li>
+    <li><b>可逆充要条件</b>：$|A|\ne0$ $\Leftrightarrow$ $r(A)=n$ $\Leftrightarrow$ 行（列）向量线性无关 $\Leftrightarrow$ $A$ 可经初等变换化为 $E$。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>
+  <ul>
+    <li><b>公式法</b>（二阶最常用）：$A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$，$A^{-1}=\dfrac{1}{ad-bc}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$；</li>
+    <li><b>初等变换法</b>：$(A\mid E)\xrightarrow{\text{行变换}}(E\mid A^{-1})$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$ 的逆矩阵。
+  <div class="ans"><span class="lbl">答案</span>　$|A|=-2\ne0$，故可逆。
+  $$A^{-1}=\frac{1}{-2}\begin{pmatrix}4&-2\\-3&1\end{pmatrix}=\begin{pmatrix}-2&1\\[2pt] \frac{3}{2}&-\frac{1}{2}\end{pmatrix}$$</div>
+</div>
+<div class="block how">
+  <span class="lbl">伴随矩阵的秩（高频考点）</span>　设 $A$ 为 $n$ 阶方阵（$n\ge2$），则伴随矩阵 $A^*$ 的秩由 $r(A)$ 唯一确定：
+  $$r(A^*)=\begin{cases} n, & r(A)=n\ \text{（A 可逆）}\\[2pt] 1, & r(A)=n-1\\[2pt] 0, & r(A)&lt;n-1 \end{cases}$$
+  依据 $AA^*=A^*A=|A|E$：① $|A|\ne0$ 时 $A^*=|A|A^{-1}$，满秩；② $r(A)=n-1$ 时 $A$ 存在非零的 $n-1$ 阶子式，故 $A^*\ne O$，又 $AA^*=0$ 使 $r(A^*)\le1$，故 $r(A^*)=1$；③ $r(A)&lt;n-1$ 时所有 $n-1$ 阶子式全为零，$A^*=O$。
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　设 $A$ 是 $4$ 阶方阵，且 $r(A)=3$，求 $r(A^*)$。
+  <div class="ans"><span class="lbl">答案</span>　$n=4$，$r(A)=3=n-1$，故 $r(A^*)=1$。</div>
+</div>
+
+<h3 class="kp" id="x4"><span class="num">4</span>矩阵的秩<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　矩阵 $A$ 的秩 $r(A)$ 是 $A$ 中<b>非零子式的最高阶数</b>。等价定义：行（列）向量组的秩；初等行变换化为行阶梯形后的<b>非零行数</b>。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 性质</span>
+  <ul>
+    <li>对 $A$ 做初等行变换 → 行阶梯形 → 数非零行个数；</li>
+    <li>$0\le r(A)\le \min(m,n)$；$r(A^T)=r(A)$；</li>
+    <li>$r(AB)\le \min\{r(A),r(B)\}$；若 $A$ 可逆，则 $r(AB)=r(B)$；</li>
+    <li>$r(A)=n$（满秩）$\Leftrightarrow$ $A$ 可逆 $\Leftrightarrow |A|\ne0$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　求 $A=\begin{pmatrix}1&2&3\\2&4&6\\1&1&1\end{pmatrix}$ 的秩。
+  <div class="ans"><span class="lbl">答案</span>
+  $$A\xrightarrow[r_2-2r_1]{}\begin{pmatrix}1&2&3\\0&0&0\\1&1&1\end{pmatrix}\xrightarrow[r_3-r_1]{}\begin{pmatrix}1&2&3\\0&1&2\\0&0&0\end{pmatrix}$$
+  非零行有 2 行，故 $r(A)=2$。</div>
+</div>
+
+<h3 class="kp" id="x5"><span class="num">5</span>向量组的线性相关性<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　若存在<b>不全为零</b>的数 $k_1,\dots,k_m$ 使 $k_1\alpha_1+\cdots+k_m\alpha_m=0$，则 $\alpha_1,\dots,\alpha_m$ <b>线性相关</b>；否则<b>线性无关</b>。极大线性无关组所含向量个数称为向量组的<b>秩</b>。
+</div>
+<div class="block how">
+  <span class="lbl">怎么判定</span>
+  <ul>
+    <li>$n$ 个 $n$ 维向量线性无关 $\Leftrightarrow$ 它们拼成的行列式 $\ne0$；</li>
+    <li>向量<b>个数 $>$ 维数</b> $\Rightarrow$ 必线性相关；</li>
+    <li>含零向量的向量组必线性相关。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　判断 $\alpha_1=(1,2,3),\ \alpha_2=(1,1,1),\ \alpha_3=(1,0,0)$ 是否线性无关。
+  <div class="ans"><span class="lbl">答案</span>
+  $$|A|=\begin{vmatrix}1&1&1\\2&1&0\\3&1&0\end{vmatrix}$$
+  按第一行展开：$1\cdot\begin{vmatrix}1&0\\1&0\end{vmatrix}-1\cdot\begin{vmatrix}2&0\\3&0\end{vmatrix}+1\cdot\begin{vmatrix}2&1\\3&1\end{vmatrix}=0-0+(2-3)=-1\ne0$，故线性无关。</div>
+</div>
+
+<h3 class="kp" id="x6"><span class="num">6</span>线性方程组<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>
+  <ul>
+    <li>齐次 $Ax=0$：有<b>非零解</b> $\Leftrightarrow r(A)&lt;n$（$n$ 为未知数个数）；</li>
+    <li>非齐次 $Ax=b$：<b>有解</b> $\Leftrightarrow r(A)=r(A\mid b)$；有唯一解 $\Leftrightarrow r(A)=r(A\mid b)=n$。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 解的结构</span>
+  <ul>
+    <li>对增广矩阵 $(A\mid b)$ 做初等行变换 → 行最简形 → 回代；</li>
+    <li>$Ax=b$ 的通解 $=$ 一个<b>特解</b> $+$ $Ax=0$ 的<b>基础解系</b>（含 $n-r(A)$ 个线性无关解向量）的任意线性组合。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求齐次方程组 $\begin{cases}x_1+x_2+x_3=0\\2x_1+3x_2+x_3=0\end{cases}$ 的基础解系与通解。
+  <div class="ans"><span class="lbl">答案</span>　系数矩阵 $\begin{pmatrix}1&1&1\\2&3&1\end{pmatrix}\to\begin{pmatrix}1&0&2\\0&1&-1\end{pmatrix}$。
+  令 $x_3=t$，得 $x_1=-2t,\ x_2=t$，通解 $x=t(-2,1,1)^T$，基础解系 $\{(-2,1,1)^T\}$。</div>
+</div>
+
+<h3 class="kp" id="x7"><span class="num">7</span>特征值与特征向量<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　若 $Ax=\lambda x$（$x\ne0$），则 $\lambda$ 为 $A$ 的<b>特征值</b>，$x$ 为对应特征向量。特征值满足特征方程 $|\lambda E-A|=0$。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 对角化</span>
+  <ul>
+    <li>① 解 $|\lambda E-A|=0$ 得全部特征值；② 对每个 $\lambda$，解 $(\lambda E-A)x=0$ 得特征向量；</li>
+    <li>$n$ 阶 $A$ 有 $n$ 个线性无关特征向量 $\Leftrightarrow$ $A$ 可对角化 $P^{-1}AP=\Lambda$；</li>
+    <li><b>实对称矩阵</b>特征值全为实数，且必可<b>正交对角化</b>。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求 $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$ 的特征值与特征向量。
+  <div class="ans"><span class="lbl">答案</span>
+  $$|\lambda E-A|=\begin{vmatrix}\lambda-2&-1\\-1&\lambda-2\end{vmatrix}=(\lambda-2)^2-1=(\lambda-1)(\lambda-3)=0$$
+  特征值 $1,3$。$\lambda=1$：特征向量 $k(1,-1)^T$；$\lambda=3$：特征向量 $k(1,1)^T$。</div>
+</div>
+
+<h3 class="kp" id="x8"><span class="num">8</span>多项式<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　数域 $F$ 上的一元多项式 $f(x)=a_nx^n+\cdots+a_0$。核心概念：
+  <ul>
+    <li><b>带余除法</b>：$f(x)=q(x)g(x)+r(x)$，$r$ 的次数 $&lt; g$ 的次数或 $r=0$；$r=0$ 时称 $g\mid f$（整除）；</li>
+    <li><b>最大公因式</b> $(f,g)$：用辗转相除（欧几里得算法）求得；</li>
+    <li><b>因式定理</b>：$x-a\mid f(x)\Leftrightarrow f(a)=0$；</li>
+    <li><b>重根</b>：$a$ 是 $f$ 的 $k$ 重根 $\Leftrightarrow f(a)=f'(a)=\cdots=f^{(k-1)}(a)=0$ 而 $f^{(k)}(a)\ne0$；</li>
+    <li><b>代数基本定理</b>：复数域上 $n$ 次多项式恰有 $n$ 个复根（重根按重数计）；实系数多项式的复根成共轭对出现。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>　判根用代入检验 $f(a)=0$；因式分解可综合运用因式定理、试根、长除法；判重根用 $f$ 与 $f'$ 是否还有公共根。
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　判断 $x=1$ 是否为 $f(x)=x^3-3x+2$ 的根，并作因式分解。
+  <div class="ans"><span class="lbl">答案</span>　$f(1)=1-3+2=0$，由因式定理 $x-1\mid f(x)$。长除法：
+  $$f(x)=(x-1)(x^2+x-2)=(x-1)^2(x+2)$$
+  又 $f'(x)=3x^2-3$，$f'(1)=0$ 而 $f''(1)=6\ne0$，故 $x=1$ 是<b>二重根</b>。</div>
+</div>
+
+<h3 class="kp" id="x9"><span class="num">9</span>线性空间与线性变换<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>
+  <ul>
+    <li><b>线性空间（向量空间）</b>：对加法与数乘封闭且满足八条公理的集合；<b>子空间</b>是对加法和数乘封闭的非空子集；</li>
+    <li><b>基与维数</b>：线性无关且能张成整个空间的一组向量称为基，基所含向量个数为维数 $\dim V$；</li>
+    <li><b>线性变换</b> $T$：满足 $T(\alpha+\beta)=T\alpha+T\beta$、$T(k\alpha)=kT\alpha$；</li>
+    <li>给定基，线性变换对应一个矩阵 $A$；换基后矩阵变为 $P^{-1}AP$（<b>相似</b>）；</li>
+    <li><b>正交变换</b>：保持内积（长度、距离）的线性变换，对应<b>正交矩阵</b> $Q$（$Q^TQ=E$）。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>　求线性变换在某组基下的矩阵：把基向量逐个代入变换，结果按基坐标写成列向量即可。
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　设 $T:\mathbb{R}^2\to\mathbb{R}^2$ 为 $T(x,y)=(2x+y,\ x-y)$，求 $T$ 在标准基下的矩阵。
+  <div class="ans"><span class="lbl">答案</span>　$T(1,0)=(2,1)$，$T(0,1)=(1,-1)$，故矩阵 $A=\begin{pmatrix}2&1\\1&-1\end{pmatrix}$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　下列变换中，<b>不是</b>正交变换（不保持任意两点距离）的是？
+  A. 平移　B. 旋转　C. 反射　D. 相似（位似）
+  <div class="ans"><span class="lbl">答案</span>　<b>旋转</b>和<b>反射</b>保持长度，是正交变换；<b>平移</b>虽保持距离但不是线性变换（$T(0)\ne0$）；<b>相似（位似）</b>会改变长度。本题要点：正交变换必须既是线性变换又保长度，平移不是线性变换。</div>
+</div>
+
+<h2 class="part" id="part2">大类二 · 高等数学</h2>
+
+<h3 class="kp" id="g1"><span class="num">1</span>极限与连续<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　数列与函数的极限描述"无限趋近"。函数 $f(x)$ 在 $x_0$ 处<b>连续</b> $\Leftrightarrow \lim_{x\to x_0}f(x)=f(x_0)$。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 常用结论</span>
+  <ul>
+    <li><b>两个重要极限</b>：$\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$，$\displaystyle\lim_{x\to\infty}\left(1+\frac1x\right)^{x}=\lim_{x\to0}(1+x)^{1/x}=e$；</li>
+    <li><b>等价无穷小</b>（$x\to0$）：$\sin x\sim\tan x\sim\ln(1+x)\sim e^x-1\sim x$，$1-\cos x\sim\dfrac{x^2}{2}$，$(1+x)^{\alpha}-1\sim\alpha x$；</li>
+    <li><b>洛必达法则</b>：$\dfrac{0}{0}$ 或 $\dfrac{\infty}{\infty}$ 型 $\displaystyle\lim\frac{f}{g}=\lim\frac{f'}{g'}$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求 $\displaystyle\lim_{x\to0}\frac{1-\cos x}{x^2}$。
+  <div class="ans"><span class="lbl">答案</span>　$1-\cos x\sim\dfrac{x^2}{2}$，故原式 $=\dfrac12$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　求 $\displaystyle\lim_{x\to0}\frac{e^x-1}{\sin 2x}$。
+  <div class="ans"><span class="lbl">答案</span>　$e^x-1\sim x,\ \sin2x\sim2x$，故 $\displaystyle\lim_{x\to0}\frac{x}{2x}=\frac12$。</div>
+</div>
+
+<h3 class="kp" id="g2"><span class="num">2</span>导数与微分<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　导数 $f'(x)=\displaystyle\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}$，表示切线斜率、变化率。微分 $dy=f'(x)dx$。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>
+  <ul>
+    <li>基本公式：$(x^\alpha)'=\alpha x^{\alpha-1}$，$(\sin x)'=\cos x$，$(\cos x)'=-\sin x$，$(e^x)'=e^x$，$(\ln x)'=\dfrac1x$，$(\tan x)'=\sec^2 x$；</li>
+    <li>四则：$(uv)'=u'v+uv'$，$\left(\dfrac{u}{v}\right)'=\dfrac{u'v-uv'}{v^2}$；复合：$(f(g(x)))'=f'(g(x))g'(x)$；</li>
+    <li>隐函数求导：两边对 $x$ 求导解出 $y'$；参数方程 $\dfrac{dy}{dx}=\dfrac{y'(t)}{x'(t)}$；高阶导数逐次求导。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　设 $y=x\sin x$，求 $y'$。
+  <div class="ans"><span class="lbl">答案</span>　$y'=\sin x+x\cos x$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　由方程 $x^2+y^2=1$ 确定隐函数 $y=y(x)$，求 $\dfrac{dy}{dx}$。
+  <div class="ans"><span class="lbl">答案</span>　$2x+2y\cdot y'=0\Rightarrow y'=-\dfrac{x}{y}$。</div>
+</div>
+
+<h3 class="kp" id="g3"><span class="num">3</span>中值定理、泰勒公式与导数应用<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么（三大中值定理）</span>
+  <ul>
+    <li><b>罗尔</b>：$f$ 在 $[a,b]$ 连续、$(a,b)$ 可导且 $f(a)=f(b)$，则存在 $c$ 使 $f'(c)=0$；</li>
+    <li><b>拉格朗日</b>：存在 $c$ 使 $f'(c)=\dfrac{f(b)-f(a)}{b-a}$；</li>
+    <li><b>柯西</b>：$f,g$ 在 $[a,b]$ 连续、$(a,b)$ 可导且 $g'\ne0$，则存在 $c$ 使 $\dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(c)}{g'(c)}$（是洛必达法则的理论基础）。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">泰勒公式 / 极值求法</span>
+  <ul>
+    <li><b>泰勒公式</b>：$f(x)=f(x_0)+f'(x_0)(x-x_0)+\dfrac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n+R_n$，拉格朗日余项 $R_n=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}$；$x_0=0$ 为<b>麦克劳林公式</b>；</li>
+    <li>极值判定：求驻点（$f'=0$），用一阶导变号或二阶导 $f''&gt;0$ 极小 / $f''&lt;0$ 极大；</li>
+    <li>最值：比较驻点、不可导点、端点处的函数值。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求 $f(x)=x^3-3x$ 的极值。
+  <div class="ans"><span class="lbl">答案</span>　$f'=3(x-1)(x+1)$，驻点 $x=\pm1$。$f''=6x$：$f''(-1)=-6&lt;0$ 极大值 $2$；$f''(1)=6&gt;0$ 极小值 $-2$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　写出 $e^x$ 在 $x=0$ 的三阶麦克劳林公式。
+  <div class="ans"><span class="lbl">答案</span>　$e^x=1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6}+o(x^3)$。</div>
+</div>
+
+<h3 class="kp" id="g4"><span class="num">4</span>不定积分<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　$f(x)$ 的全体原函数 $\int f(x)dx=F(x)+C$（$F'=f$）。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>
+  <ul>
+    <li>基本积分表：$\int x^\alpha dx=\dfrac{x^{\alpha+1}}{\alpha+1}+C\ (\alpha\ne-1)$，$\int\dfrac1x dx=\ln|x|+C$，$\int e^x dx=e^x+C$，$\int\sin x\,dx=-\cos x+C$；</li>
+    <li><b>换元法</b>：凑微分 $\int f(g(x))g'(x)dx=\int f(u)du$；</li>
+    <li><b>分部积分</b>：$\int u\,dv=uv-\int v\,du$（口诀"反对幂指三"）。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求 $\displaystyle\int x e^x dx$。
+  <div class="ans"><span class="lbl">答案</span>　$\displaystyle\int x e^x dx=x e^x-\int e^x dx=xe^x-e^x+C$。</div>
+</div>
+
+<h3 class="kp" id="g5"><span class="num">5</span>定积分<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　$\int_a^b f(x)dx$ 表示曲边梯形面积的代数和。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 应用</span>
+  <ul>
+    <li><b>牛顿-莱布尼茨公式</b>：$\displaystyle\int_a^b f(x)dx=F(b)-F(a)$（$F'=f$）；</li>
+    <li>换元、分部与不定积分相同，需同步换上下限；</li>
+    <li>几何应用：面积 $S=\int_a^b |f(x)-g(x)|dx$；旋转体体积 $V=\pi\int_a^b [f(x)]^2dx$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　计算 $\displaystyle\int_0^1 x^2 dx$。
+  <div class="ans"><span class="lbl">答案</span>　$\displaystyle\int_0^1 x^2dx=\left.\frac{x^3}{3}\right|_0^1=\frac13$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求 $y=x^2$ 与 $y=x$ 所围图形面积。
+  <div class="ans"><span class="lbl">答案</span>　交点 $x=0,1$，$S=\int_0^1(x-x^2)dx=\left.\left(\frac{x^2}{2}-\frac{x^3}{3}\right)\right|_0^1=\frac16$。</div>
+</div>
+
+<h3 class="kp" id="g6"><span class="num">6</span>无穷级数<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　数项级数 $\sum a_n$ 的部分和 $S_n$ 有极限则收敛。幂级数 $\sum a_n x^n$ 在收敛半径 $R$ 内绝对收敛。
+</div>
+<div class="block how">
+  <span class="lbl">怎么判定 / 展开</span>
+  <ul>
+    <li>正项级数：<b>比值</b> $\rho=\lim\dfrac{a_{n+1}}{a_n}$（$\rho&lt;1$ 收敛，$\rho&gt;1$ 发散）；<b>p 级数</b> $\sum\dfrac1{n^p}$：$p&gt;1$ 收敛；</li>
+    <li>交错级数（莱布尼茨）：$a_n$ 单调递减趋于 0 则收敛；</li>
+    <li>收敛半径 $R=\displaystyle\lim\left|\frac{a_n}{a_{n+1}}\right|$；</li>
+    <li>麦克劳林展开：$e^x=\sum\dfrac{x^n}{n!}$，$\sin x=\sum(-1)^n\dfrac{x^{2n+1}}{(2n+1)!}$，$\ln(1+x)=\sum(-1)^{n+1}\dfrac{x^n}{n}$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求幂级数 $\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n}$ 的收敛半径。
+  <div class="ans"><span class="lbl">答案</span>　$R=\displaystyle\lim_{n\to\infty}\frac{a_n}{a_{n+1}}=\lim_{n\to\infty}\frac{n+1}{n}=1$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　判断 $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^2}$ 的敛散性。
+  <div class="ans"><span class="lbl">答案</span>　$p=2&gt;1$ 的 $p$ 级数，收敛。</div>
+</div>
+
+<h3 class="kp" id="g7"><span class="num">7</span>傅里叶级数<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　周期为 $2\pi$ 的函数 $f(x)$ 展开为三角级数：
+  $$f(x)\sim\frac{a_0}{2}+\sum_{n=1}^{\infty}(a_n\cos nx+b_n\sin nx)$$
+  其中<b>傅里叶系数</b>：
+  $$a_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\cos nx\,dx,\qquad b_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\sin nx\,dx$$
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 性质</span>
+  <ul>
+    <li>奇函数只有 $\sin$ 项（$a_n=0$，正弦级数）；偶函数只有 $\cos$ 项（$b_n=0$，余弦级数）；</li>
+    <li><b>狄利克雷收敛定理</b>：分段单调连续时，级数收敛到 $\dfrac{f(x+0)+f(x-0)}{2}$（间断点取左右极限平均）。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　将 $f(x)=x$（$-\pi&lt;x&lt;\pi$，以 $2\pi$ 为周期）展开为傅里叶级数。
+  <div class="ans"><span class="lbl">答案</span>　$f$ 为奇函数，$a_n=0$；
+  $$b_n=\frac1\pi\int_{-\pi}^{\pi}x\sin nx\,dx=\frac{2(-1)^{n+1}}{n}$$
+  故 $x=\displaystyle\sum_{n=1}^{\infty}\frac{2(-1)^{n+1}}{n}\sin nx$。</div>
+</div>
+
+<h3 class="kp" id="g8"><span class="num">8</span>常微分方程<span class="badge p1">扩展</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　含未知函数及其导数的方程。一阶线性 $y'+P(x)y=Q(x)$；二阶常系数线性 $y''+py'+qy=f(x)$。<span style="color:#a0522d">（大纲未点名，但科目三真题解答题偶见。）</span>
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>
+  <ul>
+    <li><b>可分离变量</b>：$\dfrac{dy}{dx}=g(x)h(y)\Rightarrow\displaystyle\int\dfrac{dy}{h(y)}=\int g(x)dx$；</li>
+    <li><b>一阶线性通解</b>：$y=e^{-\int P dx}\left[\displaystyle\int Q e^{\int P dx}dx+C\right]$；</li>
+    <li><b>二阶常系数齐次</b> $y''+py'+qy=0$：特征方程 $r^2+pr+q=0$，实不等根 $y=C_1e^{r_1x}+C_2e^{r_2x}$，重根 $y=(C_1+C_2x)e^{rx}$，复根 $y=e^{\alpha x}(C_1\cos\beta x+C_2\sin\beta x)$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　解 $y'+2xy=0$。
+  <div class="ans"><span class="lbl">答案</span>　$\dfrac{dy}{y}=-2x\,dx$，$\ln|y|=-x^2+C_1$，故 $y=Ce^{-x^2}$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　解 $y''-3y'+2y=0$。
+  <div class="ans"><span class="lbl">答案</span>　$r^2-3r+2=(r-1)(r-2)=0$，通解 $y=C_1e^x+C_2e^{2x}$。</div>
+</div>
+
+<h3 class="kp" id="g9"><span class="num">9</span>多元函数微积分<span class="badge p1">扩展</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　$z=f(x,y)$ 的偏导数 $\dfrac{\partial z}{\partial x}$（对 $x$ 求导时视 $y$ 为常数）；全微分 $dz=\dfrac{\partial z}{\partial x}dx+\dfrac{\partial z}{\partial y}dy$。<span style="color:#a0522d">（大纲写"一元函数微积分"，本块属超纲，真题偶见，时间紧可跳过。）</span>
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>
+  <ul>
+    <li>无条件极值：解 $\dfrac{\partial z}{\partial x}=0,\ \dfrac{\partial z}{\partial y}=0$，用 $A=f''_{xx},B=f''_{xy},C=f''_{yy}$ 判：$AC-B^2&gt;0$ 且 $A&gt;0$ 极小 / $A&lt;0$ 极大；</li>
+    <li>条件极值：拉格朗日乘数法 $L=f+\lambda\varphi$；</li>
+    <li>二重积分：化为累次积分；圆域常用极坐标 $dxdy=\rho\,d\rho\,d\theta$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　求 $z=x^2+y^2$ 在约束 $x+y=1$ 下的最小值。
+  <div class="ans"><span class="lbl">答案</span>　$y=1-x$ 代入：$z=2x^2-2x+1=2\left(x-\frac12\right)^2+\frac12$，当 $x=\frac12$ 时最小值 $\dfrac12$。</div>
+</div>
+
+<h2 class="part" id="part3">大类三 · 概率论与数理统计</h2>
+
+<h3 class="kp" id="p1"><span class="num">1</span>随机事件与概率<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　古典概型 $P(A)=\dfrac{|A|}{|\Omega|}$；条件概率 $P(B|A)=\dfrac{P(AB)}{P(A)}$。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算（三大公式）</span>
+  <ul>
+    <li><b>乘法</b>：$P(AB)=P(A)P(B|A)$；</li>
+    <li><b>全概率</b>：$A_i$ 完备事件组时 $P(B)=\sum_i P(A_i)P(B|A_i)$；</li>
+    <li><b>贝叶斯</b>：$P(A_i|B)=\dfrac{P(A_i)P(B|A_i)}{\sum_j P(A_j)P(B|A_j)}$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　袋中有 3 红 2 白，任取 2 个，求取到 2 个红球的概率。
+  <div class="ans"><span class="lbl">答案</span>　$P=\dfrac{C_3^2}{C_5^2}=\dfrac{3}{10}$。</div>
+</div>
+
+<h3 class="kp" id="p2"><span class="num">2</span>一维随机变量及其分布<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>
+  <ul>
+    <li><b>离散型</b>：分布律 $P(X=x_k)=p_k$；</li>
+    <li><b>连续型</b>：密度 $f(x)$，分布函数 $F(x)=\displaystyle\int_{-\infty}^{x}f(t)dt$，$P(a&lt;X&lt;b)=\int_a^b f(x)dx$，$\int_{-\infty}^{+\infty}f(x)dx=1$。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">常见分布</span>
+  <ul>
+    <li>二项 $B(n,p)$：$P(X=k)=C_n^k p^k(1-p)^{n-k}$；泊松 $P(\lambda)$：$P(X=k)=\dfrac{\lambda^k e^{-\lambda}}{k!}$；</li>
+    <li>均匀 $U(a,b)$：$f(x)=\dfrac{1}{b-a}$；正态 $N(\mu,\sigma^2)$：$f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　设 $X\sim N(0,1)$，求 $P(|X|&lt;1)$（用 $\Phi(1)=0.8413$）。
+  <div class="ans"><span class="lbl">答案</span>　$P(|X|&lt;1)=2\Phi(1)-1=2\times0.8413-1=0.6826$。</div>
+</div>
+
+<h3 class="kp" id="p3"><span class="num">3</span>二维随机变量<span class="badge p1">扩展</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　$(X,Y)$ 的<b>联合分布</b>；由联合分布求<b>边缘分布</b>；$X,Y$ <b>相互独立</b> $\Leftrightarrow f(x,y)=f_X(x)f_Y(y)$（连续型）或 $P(X=x,Y=y)=P(X=x)P(Y=y)$（离散型）。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算</span>　边缘分布：离散型按行/列求和，连续型 $f_X(x)=\int_{-\infty}^{+\infty}f(x,y)dy$；判独立看联合是否等于边缘乘积。
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　设 $(X,Y)$ 联合分布律：
+  $P(0,0)=0.2,\ P(0,1)=0.3,\ P(1,0)=0.3,\ P(1,1)=0.2$，求 $P(X=0)$、$P(Y=0)$，并判断独立性。
+  <div class="ans"><span class="lbl">答案</span>　$P(X=0)=0.2+0.3=0.5$，$P(Y=0)=0.2+0.3=0.5$。
+  但 $P(X=0,Y=0)=0.2\ne0.5\times0.5=0.25$，故 $X,Y$ <b>不独立</b>。</div>
+</div>
+
+<h3 class="kp" id="p4"><span class="num">4</span>数字特征<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　期望 $E(X)$，方差 $D(X)=E(X^2)-[E(X)]^2$，标准差 $\sqrt{D(X)}$。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 公式</span>
+  <ul>
+    <li>$E(aX+b)=aE(X)+b$，$D(aX+b)=a^2D(X)$；</li>
+    <li>二项 $E=np,\ D=np(1-p)$；泊松 $E=D=\lambda$；均匀 $E=\dfrac{a+b}{2},\ D=\dfrac{(b-a)^2}{12}$；正态 $E=\mu,\ D=\sigma^2$；</li>
+    <li>协方差 $\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)$，相关系数 $\rho=\dfrac{\mathrm{Cov}(X,Y)}{\sqrt{D(X)D(Y)}}$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　设 $X\sim B(10,0.3)$，求 $E(X)$ 与 $D(X)$。
+  <div class="ans"><span class="lbl">答案</span>　$E(X)=10\times0.3=3$，$D(X)=10\times0.3\times0.7=2.1$。</div>
+</div>
+
+<h3 class="kp" id="p5"><span class="num">5</span>大数定律与中心极限定理<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>
+  <ul>
+    <li><b>切比雪夫不等式</b>：$P(|X-E(X)|\ge\varepsilon)\le\dfrac{D(X)}{\varepsilon^2}$；</li>
+    <li><b>大数定律</b>：独立同分布序列的算术平均依概率收敛于期望；</li>
+    <li><b>中心极限定理</b>：独立同分布（期望 $\mu$、方差 $\sigma^2$）的 $n$ 个变量之和近似 $N(n\mu,n\sigma^2)$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　设 $E(X)=10,\ D(X)=4$，用切比雪夫不等式估计 $P(|X-10|\ge3)$ 的上界。
+  <div class="ans"><span class="lbl">答案</span>　$P(|X-10|\ge3)\le\dfrac{4}{9}$。</div>
+</div>
+
+<h3 class="kp" id="p6"><span class="num">6</span>参数估计与假设检验<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　用样本估计总体参数。样本均值 $\bar X=\dfrac1n\sum X_i$，样本方差 $S^2=\dfrac{1}{n-1}\sum(X_i-\bar X)^2$。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算（两种估计）</span>
+  <ul>
+    <li><b>矩估计</b>：令样本矩 = 总体矩解出参数（如 $E(X)=\bar X$）；</li>
+    <li><b>极大似然估计</b>：似然函数 $L(\theta)=\prod f(x_i;\theta)$，令 $\dfrac{d\ln L}{d\theta}=0$ 求最大；</li>
+    <li><b>假设检验</b>：原假设 $H_0$ 与显著性水平 $\alpha$，由统计量确定拒绝域后作出判断。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　设总体 $X\sim U(0,\theta)$（$\theta&gt;0$ 未知），求 $\theta$ 的矩估计与极大似然估计。
+  <div class="ans"><span class="lbl">答案</span>　① 矩估计：$E(X)=\dfrac{\theta}{2}=\bar X\Rightarrow\hat\theta=2\bar X$；② 极大似然：$L=\theta^{-n}$（$0\le x_i\le\theta$），$\theta$ 越小 $L$ 越大，但需 $\theta\ge\max x_i$，故 $\hat\theta=\max X_i$。</div>
+</div>
+
+<h2 class="part" id="part4">大类四 · 向量</h2>
+<div class="note">大纲"解析几何"课程中，科目三真题实际只涉及<b>向量及其运算</b>；空间直线、平面、曲面在科目三真题罕见，已按要求移除。</div>
+
+<h3 class="kp" id="v1"><span class="num">1</span>向量代数<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>
+  <ul>
+    <li><b>数量积（点积）</b>：$\vec a\cdot\vec b=|\vec a||\vec b|\cos\theta=a_xb_x+a_yb_y+a_zb_z$；</li>
+    <li><b>向量积（叉积）</b>：$\vec a\times\vec b$ 垂直于 $\vec a,\vec b$，$|\vec a\times\vec b|=|\vec a||\vec b|\sin\theta$；</li>
+    <li><b>混合积</b>：$[\vec a\ \vec b\ \vec c]=(\vec a\times\vec b)\cdot\vec c$，绝对值等于平行六面体体积。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">怎么判定</span>　$\vec a\perp\vec b\Leftrightarrow\vec a\cdot\vec b=0$；$\vec a\parallel\vec b\Leftrightarrow\vec a\times\vec b=\vec 0$（对应分量成比例）。
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　设 $\vec a=(1,2,-1),\ \vec b=(2,-1,3)$，求 $\vec a\cdot\vec b$，并判断是否垂直。
+  <div class="ans"><span class="lbl">答案</span>　$\vec a\cdot\vec b=2-2-3=-3\ne0$，故不垂直。</div>
+</div>
+
+<h2 class="part" id="part5">第二部分 · 高中数学补充</h2>
+<div class="note">大纲要求掌握高中数学必修及选修（系列 1、2 及 3-1、4-1、4-2、4-4、4-5）全部内容；但计算题占比小、多出现在教学设计/案例分析中，此处列高频公式速查。</div>
+
+<h3 class="kp" id="h1"><span class="num">1</span>函数<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>
+  <ul>
+    <li>定义域：分式分母 $\ne0$、偶次根式被开方数 $\ge0$、对数真数 $&gt;0$；</li>
+    <li>单调性、奇偶性（$f(-x)=f(x)$ 偶，$f(-x)=-f(x)$ 奇）；</li>
+    <li>指数/对数：$a^m a^n=a^{m+n}$，$\log_a(MN)=\log_a M+\log_a N$，换底 $\log_a b=\dfrac{\log_c b}{\log_c a}$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　求 $f(x)=\sqrt{\log_2 x-1}$ 的定义域。
+  <div class="ans"><span class="lbl">答案</span>　$\log_2 x\ge1\Rightarrow x\ge2$，定义域 $[2,+\infty)$。</div>
+</div>
+
+<h3 class="kp" id="h2"><span class="num">2</span>数列<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>
+  <ul>
+    <li>等差：$a_n=a_1+(n-1)d$，$S_n=\dfrac{n(a_1+a_n)}{2}=na_1+\dfrac{n(n-1)}2d$；</li>
+    <li>等比：$a_n=a_1q^{n-1}$，$S_n=\dfrac{a_1(1-q^n)}{1-q}\ (q\ne1)$；</li>
+    <li>$a_n=S_n-S_{n-1}\ (n\ge2)$，$a_1=S_1$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　等差数列 $a_1=2,\ d=3$，求 $a_5$ 与 $S_{10}$。
+  <div class="ans"><span class="lbl">答案</span>　$a_5=14$；$S_{10}=10\times2+\dfrac{10\times9}{2}\times3=155$。</div>
+</div>
+
+<h3 class="kp" id="h3"><span class="num">3</span>三角函数<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>
+  <ul>
+    <li>同角：$\sin^2\alpha+\cos^2\alpha=1$，$\tan\alpha=\dfrac{\sin\alpha}{\cos\alpha}$；</li>
+    <li>倍角：$\sin2\alpha=2\sin\alpha\cos\alpha$，$\cos2\alpha=\cos^2\alpha-\sin^2\alpha=2\cos^2\alpha-1=1-2\sin^2\alpha$；</li>
+    <li>解三角形：正弦 $\dfrac{a}{\sin A}=2R$，余弦 $c^2=a^2+b^2-2ab\cos C$；面积 $S=\dfrac12ab\sin C$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　$\triangle ABC$ 中 $a=3,\ b=4,\ C=60^\circ$，求 $c$。
+  <div class="ans"><span class="lbl">答案</span>　$c^2=9+16-2\times3\times4\times\frac12=13$，$c=\sqrt{13}$。</div>
+</div>
+
+<h3 class="kp" id="h4"><span class="num">4</span>平面向量<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>　$\vec a=(x_1,y_1),\vec b=(x_2,y_2)$：数量积 $\vec a\cdot\vec b=x_1x_2+y_1y_2$；模 $|\vec a|=\sqrt{x_1^2+y_1^2}$；平行 $\dfrac{x_1}{x_2}=\dfrac{y_1}{y_2}$；垂直 $\vec a\cdot\vec b=0$。
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　$\vec a=(1,2),\vec b=(3,k)$，$\vec a\perp\vec b$，求 $k$。
+  <div class="ans"><span class="lbl">答案</span>　$3+2k=0\Rightarrow k=-\dfrac32$。</div>
+</div>
+
+<h3 class="kp" id="h5"><span class="num">5</span>不等式<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>
+  <ul>
+    <li>均值：$\dfrac{a+b}{2}\ge\sqrt{ab}$（$a,b&gt;0$）；</li>
+    <li>柯西：$(a^2+b^2)(c^2+d^2)\ge(ac+bd)^2$；</li>
+    <li>$|a|-|b|\le|a+b|\le|a|+|b|$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　$x&gt;0$，求 $x+\dfrac4x$ 的最小值。
+  <div class="ans"><span class="lbl">答案</span>　$x+\dfrac4x\ge4$，当 $x=2$ 取等，最小值 4。</div>
+</div>
+
+<h3 class="kp" id="h6"><span class="num">6</span>立体几何<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>
+  <ul>
+    <li>柱体 $V=Sh$；锥体 $V=\dfrac13Sh$；球体 $V=\dfrac43\pi R^3$，$S=4\pi R^2$；</li>
+    <li>线面、面面平行/垂直的判定与性质。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　底面半径 $r=2$、高 $h=3$ 的圆柱体积。
+  <div class="ans"><span class="lbl">答案</span>　$V=\pi r^2 h=12\pi$。</div>
+</div>
+
+<h3 class="kp" id="h7"><span class="num">7</span>解析几何（圆锥曲线）<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>
+  <ul>
+    <li>圆：$(x-a)^2+(y-b)^2=r^2$；</li>
+    <li>椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$：$c^2=a^2-b^2$，$e=\dfrac ca$；</li>
+    <li>双曲线 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$：$c^2=a^2+b^2$，渐近线 $y=\pm\dfrac ba x$；</li>
+    <li>抛物线 $y^2=2px$：焦点 $\left(\dfrac p2,0\right)$，准线 $x=-\dfrac p2$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　椭圆 $\dfrac{x^2}{9}+\dfrac{y^2}{4}=1$ 的离心率。
+  <div class="ans"><span class="lbl">答案</span>　$a=3,b=2$，$c=\sqrt5$，$e=\dfrac{\sqrt5}{3}$。</div>
+</div>
+
+<h3 class="kp" id="h8"><span class="num">8</span>复数<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>　$z=a+bi$，$i^2=-1$；模 $|z|=\sqrt{a^2+b^2}$；共轭 $\bar z=a-bi$；$z\bar z=|z|^2$；分母含 $i$ 时乘共轭有理化。
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　计算 $\dfrac{1+i}{1-i}$。
+  <div class="ans"><span class="lbl">答案</span>　$\dfrac{(1+i)^2}{(1-i)(1+i)}=\dfrac{2i}{2}=i$。</div>
+</div>
+
+<h3 class="kp" id="h9"><span class="num">9</span>导数初步（高中）<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>　$(x^n)'=nx^{n-1}$，$(\sin x)'=\cos x$，$(e^x)'=e^x$，$(\ln x)'=\dfrac1x$；切线斜率 $k=f'(x_0)$，切线 $y-f(x_0)=f'(x_0)(x-x_0)$。
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　曲线 $y=x^2+1$ 在 $x=1$ 处的切线。
+  <div class="ans"><span class="lbl">答案</span>　$f(1)=2$，$f'(1)=2$，切线 $y-2=2(x-1)$，即 $y=2x$。</div>
+</div>
+
+<h3 class="kp" id="h10"><span class="num">10</span>概率统计（高中）<span class="badge p0">必考</span></h3>
+<div class="block how">
+  <span class="lbl">核心公式</span>
+  <ul>
+    <li>古典概型 $P=\dfrac{\text{有利}}{\text{总数}}$；排列 $A_n^m=\dfrac{n!}{(n-m)!}$，组合 $C_n^m=\dfrac{n!}{m!(n-m)!}$；</li>
+    <li>互斥 $P(A\cup B)=P(A)+P(B)$；独立 $P(AB)=P(A)P(B)$；</li>
+    <li>统计：平均数、中位数、众数、方差、频率分布直方图。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　从 5 人中选 3 人排队，有多少种排法？
+  <div class="ans"><span class="lbl">答案</span>　$A_5^3=60$ 种。</div>
+</div>
+
+<h2 class="part" id="part6">第三部分 · 高频推论与小结论速查</h2>
+<div class="note">下列"小结论"是真题里藏在各大知识点下、易漏的高频推论。公式本身可直接套用，建议考前扫一遍。</div>
+
+<h3 class="kp" id="c1"><span class="num">Ⅰ</span>线性代数推论</h3>
+
+<div class="block how">
+  <span class="lbl">1. 伴随矩阵与逆矩阵的行列式</span>
+  $$|A^*|=|A|^{\,n-1}\ (n\ge2),\qquad |A^{-1}|=\frac{1}{|A|},\qquad |kA|=k^n|A|$$
+  <div style="color:#6b7785;font-size:13px;">由 $AA^*=|A|E$ 两边取行列式得 $|A|\,|A^*|=|A|^n$，故 $|A^*|=|A|^{n-1}$。</div>
+  <div class="ans" style="margin-top:6px;"><span class="lbl">例</span>　$A$ 为 3 阶方阵且 $|A|=2$，则 $|A^*|=2^{2}=4$，$|A^{-1}|=\dfrac12$。</div>
+</div>
+
+<div class="block how">
+  <span class="lbl">2. 若 $AB=O$，则 $r(A)+r(B)\le n$</span>
+  （$A$ 为 $m\times n$，$B$ 为 $n\times s$。理由：$B$ 的每列都是齐次方程 $Ax=0$ 的解。）
+  <div class="ans" style="margin-top:6px;"><span class="lbl">例</span>　$A$ 为 3 阶矩阵且 $r(A)=2$，$B$ 为非零矩阵且 $AB=O$，则 $r(B)\le 3-2=1$。</div>
+</div>
+
+<div class="block how">
+  <span class="lbl">3. 秩的运算不等式</span>
+  $$r(A+B)\le r(A)+r(B),\qquad r(A)=r(A^TA)=r(AA^T),\qquad r(AB)\le \min\{r(A),r(B)\}$$
+</div>
+
+<div class="block how">
+  <span class="lbl">4. 特征值的三个恒等式</span>
+  $$\sum_{i=1}^{n}\lambda_i=\mathrm{tr}(A),\qquad \prod_{i=1}^{n}\lambda_i=|A|$$
+  推论：$A$ 可逆 $\Leftrightarrow$ 特征值全非零；$A^k$ 的特征值为 $\lambda_i^k$；$A^{-1}$ 的特征值为 $\lambda_i^{-1}$；相似矩阵有相同的特征值、行列式、迹。
+  <div class="ans" style="margin-top:6px;"><span class="lbl">例</span>　3 阶矩阵 $A$ 的特征值为 $1,2,3$，则 $|A|=6$，$\mathrm{tr}(A)=6$。</div>
+</div>
+
+<div class="block how">
+  <span class="lbl">5. 正交矩阵 $Q$</span>
+  $$Q^TQ=E,\qquad Q^{-1}=Q^T,\qquad |Q|=\pm1$$
+  且 $Q$ 的行（列）向量组是<b>两两正交的单位向量</b>。
+</div>
+
+<div class="block how">
+  <span class="lbl">6. 可逆的等价条件（一句话汇总）</span>
+  $|A|\ne0$ $\Leftrightarrow$ $r(A)=n$ $\Leftrightarrow$ 行（列）向量线性无关 $\Leftrightarrow$ 齐次 $Ax=0$ 只有零解 $\Leftrightarrow$ 特征值全非零 $\Leftrightarrow$ $A$ 可表为初等矩阵之积。
+</div>
+
+<h3 class="kp" id="c2"><span class="num">Ⅱ</span>高等数学推论</h3>
+
+<div class="block how">
+  <span class="lbl">7. 闭区间连续函数的零点定理</span>
+  $f\in C[a,b]$ 且 $f(a)f(b)&lt;0$，则存在 $\xi\in(a,b)$ 使 $f(\xi)=0$。（可用来证明方程有根。）
+</div>
+
+<div class="block how">
+  <span class="lbl">8. 可导与连续的关系</span>
+  <b>可导 $\Rightarrow$ 连续</b>；但连续不一定可导——$f(x)=|x|$ 在 $x=0$ 连续却不可导（左右导数不等）。反之，不可导处可能是尖点或间断点。
+</div>
+
+<div class="block how">
+  <span class="lbl">9. 变上限积分求导</span>
+  $$\left(\int_a^{x}f(t)\,dt\right)'=f(x),\qquad \left(\int_a^{g(x)}f(t)\,dt\right)'=f(g(x))\,g'(x)$$
+  <div class="ans" style="margin-top:6px;"><span class="lbl">例</span>　$\dfrac{d}{dx}\int_0^{x^2}\sin t\,dt=\sin(x^2)\cdot 2x=2x\sin(x^2)$。</div>
+</div>
+
+<div class="block how">
+  <span class="lbl">10. 对称区间上的定积分</span>
+  $f$ 为<b>奇函数</b>：$\displaystyle\int_{-a}^{a}f(x)dx=0$；$f$ 为<b>偶函数</b>：$\displaystyle\int_{-a}^{a}f(x)dx=2\int_0^{a}f(x)dx$。
+  <div class="ans" style="margin-top:6px;"><span class="lbl">例</span>　$\displaystyle\int_{-1}^{1}x^3 dx=0$（奇函数）。</div>
+</div>
+
+<div class="block how">
+  <span class="lbl">11. 级数收敛的必要条件与几何级数</span>
+  $\sum a_n$ 收敛 $\Rightarrow \lim a_n=0$（逆否：$\lim a_n\ne0\Rightarrow$ 发散）。
+  几何级数 $\displaystyle\sum_{n=1}^{\infty}ar^{\,n-1}=\frac{a}{1-r}$（$|r|&lt;1$ 时）。
+</div>
+
+<h3 class="kp" id="c3"><span class="num">Ⅲ</span>概率统计推论</h3>
+
+<div class="block how">
+  <span class="lbl">12. 概率基本恒等式</span>
+  $$P(\bar A)=1-P(A),\qquad P(A\cup B)=P(A)+P(B)-P(AB),\qquad P(A-B)=P(A)-P(AB)$$
+  （$A,B$ 互斥时 $P(AB)=0$，$P(A\cup B)=P(A)+P(B)$。）
+</div>
+
+<div class="block how">
+  <span class="lbl">13. 数字特征的运算（重点记独立情形）</span>
+  若 $X,Y$ <b>相互独立</b>：$E(XY)=E(X)E(Y)$，$D(X\pm Y)=D(X)+D(Y)$。
+  一般情形：$D(X\pm Y)=D(X)+D(Y)\pm 2\,\mathrm{Cov}(X,Y)$。
+  <div class="ans" style="margin-top:6px;"><span class="lbl">例</span>　$X,Y$ 独立且 $D(X)=2,\ D(Y)=3$，则 $D(X+Y)=5$。</div>
+</div>
+
+<h2 class="part" id="part7">第四部分 · 补充专题</h2>
+<div class="note">以下为真题出现、前文未单独展开的内容：计数原理、幂级数收敛域、二次型、立体与解析几何。</div>
+
+<h3 class="kp" id="s1"><span class="num">1</span>计数原理（排列组合与二项式定理）<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>
+  <ul>
+    <li><b>分类加法原理</b>：互斥方案计数相加；<b>分步乘法原理</b>：连续步骤计数相乘；</li>
+    <li><b>排列</b>（有顺序）：$A_n^m=\dfrac{n!}{(n-m)!}=n(n-1)\cdots(n-m+1)$；</li>
+    <li><b>组合</b>（无顺序）：$C_n^m=\dfrac{n!}{m!(n-m)!}$。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 性质</span>
+  <ul>
+    <li>$C_n^m=C_n^{\,n-m}$；$C_n^0+C_n^1+\cdots+C_n^n=2^n$；</li>
+    <li><b>二项式定理</b>：$(a+b)^n=\sum_{k=0}^{n}C_n^k\,a^{n-k}b^k$；</li>
+    <li><b>通项</b>（第 $k+1$ 项）：$T_{k+1}=C_n^k\,a^{n-k}b^k$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求 $(x+2)^5$ 展开式中 $x^3$ 项的系数。
+  <div class="ans"><span class="lbl">答案</span>　$T_{k+1}=C_5^k x^{5-k}2^k$，令 $5-k=3$ 得 $k=2$，系数 $C_5^2\cdot 2^2=10\times4=40$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　已知 $C_n^2=15$，求 $n$。
+  <div class="ans"><span class="lbl">答案</span>　$\dfrac{n(n-1)}{2}=15\Rightarrow n(n-1)=30\Rightarrow n=6$。</div>
+</div>
+
+<h3 class="kp" id="s2"><span class="num">2</span>幂级数收敛域的计算<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　幂级数 $\sum a_n x^n$ 的<b>收敛半径</b> $R$ 决定收敛区间 $(-R,R)$；<b>收敛域</b>还需判断端点 $x=\pm R$ 处数项级数的敛散性（端点可能收敛也可能发散）。
+</div>
+<div class="block how">
+  <span class="lbl">怎么算（三步）</span>
+  <ul>
+    <li>① 求收敛半径：$R=\displaystyle\lim_{n\to\infty}\left|\frac{a_n}{a_{n+1}}\right|$（或根值法 $\lim\sqrt[n]{|a_n|}$）；</li>
+    <li>② 把 $x=R$ 与 $x=-R$ 分别代入，判断所得数项级数的敛散性；</li>
+    <li>③ 收敛域 $=(-R,R)$ 加上收敛的端点。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag zt">真题题型</span>　求 $\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n}$ 的收敛域。
+  <div class="ans"><span class="lbl">答案</span>　$R=\lim\dfrac{n+1}{n}=1$。端点：$x=1$ 得 $\sum\frac1n$ <b>发散</b>（调和级数）；$x=-1$ 得 $\sum\frac{(-1)^n}{n}$ <b>收敛</b>（莱布尼茨交错级数）。故收敛域为 $[-1,1)$。</div>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　求 $\displaystyle\sum_{n=1}^{\infty}\frac{x^n}{n^2}$ 的收敛域。
+  <div class="ans"><span class="lbl">答案</span>　$R=1$。端点 $x=\pm1$ 得 $\sum\frac1{n^2}$，$p=2&gt;1$ <b>收敛</b>。故收敛域为 $[-1,1]$。</div>
+</div>
+
+<h3 class="kp" id="s3"><span class="num">3</span>二次型的概念<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">是什么</span>　$n$ 元<b>二次齐次多项式</b> $f(x_1,\dots,x_n)=x^TAx$（$A$ 为对称矩阵）称为<b>二次型</b>。
+  <ul>
+    <li><b>标准形</b>：只含平方项 $f=d_1y_1^2+\cdots+d_ny_n^2$；</li>
+    <li><b>正定</b>：对任意 $x\ne0$ 有 $f&gt;0$。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">怎么算 / 判定</span>
+  <ul>
+    <li>化标准形：<b>配方法</b>（逐项配平方）或<b>正交变换法</b> $x=Qy$；</li>
+    <li><b>正定判定</b>：$A$ 正定 $\Leftrightarrow$ 特征值全 $&gt;0$ $\Leftrightarrow$ 各阶顺序主子式全 $&gt;0$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　用配方法化 $f=x_1^2+2x_2^2+5x_3^2+2x_1x_2+2x_1x_3+6x_2x_3$ 为标准形。
+  <div class="ans"><span class="lbl">答案</span>　$f=(x_1+x_2+x_3)^2+(x_2+2x_3)^2$，令 $y_1=x_1+x_2+x_3,\ y_2=x_2+2x_3$，得标准形 $f=y_1^2+y_2^2$。</div>
+</div>
+
+<h3 class="kp" id="s4"><span class="num">4</span>立体几何与解析几何<span class="badge p0">必考</span></h3>
+<div class="block what">
+  <span class="lbl">① 空间几何体（体积 / 表面积）</span>
+  <ul>
+    <li>柱体 $V=Sh$；锥体 $V=\dfrac13Sh$；台体 $V=\dfrac13(S_1+\sqrt{S_1S_2}+S_2)h$；</li>
+    <li>球体 $V=\dfrac43\pi R^3$，$S=4\pi R^2$。</li>
+  </ul>
+</div>
+<div class="block what">
+  <span class="lbl">② 空间点线面位置关系</span>
+  <ul>
+    <li>线面平行：线线平行 $\Rightarrow$ 线面平行 $\Rightarrow$ 面面平行（及逆否）；</li>
+    <li>线面垂直：线线垂直 $\Rightarrow$ 线面垂直 $\Rightarrow$ 面面垂直（及性质定理）。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">③ 平面解析几何（直线、圆、圆锥曲线）</span>
+  <ul>
+    <li>圆：$(x-a)^2+(y-b)^2=r^2$；</li>
+    <li>椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$：$c^2=a^2-b^2$，离心率 $e=\dfrac ca$，焦点 $(\pm c,0)$；</li>
+    <li>双曲线 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$：$c^2=a^2+b^2$，渐近线 $y=\pm\dfrac ba x$；</li>
+    <li>抛物线 $y^2=2px$：焦点 $\left(\dfrac p2,0\right)$，准线 $x=-\dfrac p2$。</li>
+  </ul>
+</div>
+<div class="block how">
+  <span class="lbl">④ 空间解析几何（空间直线与平面）</span>
+  <ul>
+    <li>平面一般式：$Ax+By+Cz+D=0$，法向量 $\vec n=(A,B,C)$；</li>
+    <li>直线点向式：$\dfrac{x-x_0}{l}=\dfrac{y-y_0}{m}=\dfrac{z-z_0}{n}$，方向向量 $(l,m,n)$；</li>
+    <li>点到平面距离：$d=\dfrac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}$。</li>
+  </ul>
+</div>
+<div class="block example">
+  <span class="lbl">例题</span><span class="tag">典型题</span>　求点 $P(1,2,1)$ 到平面 $2x-y+2z+3=0$ 的距离。
+  <div class="ans"><span class="lbl">答案</span>　$d=\dfrac{|2\times1-2+2\times1+3|}{\sqrt{2^2+(-1)^2+2^2}}=\dfrac{5}{3}$。</div>
+</div>
+
+</div>
+
+<style>
+  .mkbtn{display:inline-block;font-size:12px;padding:2px 9px;border-radius:11px;margin-left:8px;
+    background:#eef1f5;color:#5a6b7d;cursor:pointer;border:1px solid #d0d8e2;vertical-align:2px;user-select:none;transition:all .15s;}
+  .mkbtn:hover{background:#e2e8f0}
+  h3.kp.marked{border-bottom-color:#e6a700}
+  h3.kp.marked .mkbtn{background:#fff3cd;color:#8a6d00;border-color:#e6c200;font-weight:600}
+  .block.hl{background:#fffbe6 !important;border-left:4px solid #e6a700 !important}
+  #revPanel{position:fixed;right:18px;bottom:18px;width:212px;background:#fff;border:1px solid #d7e0ea;
+    border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.16);padding:12px 14px;z-index:9999;font-size:13px;font-family:inherit;}
+  #revPanel .ttl{font-weight:700;color:#1f4e79;font-size:14px}
+  #revPanel .cnt{color:#6b7785;margin:3px 0 2px}
+  #revPanel button{display:block;width:100%;margin-top:7px;padding:7px 8px;border:1px solid #d0d8e2;border-radius:7px;
+    background:#f7f9fc;cursor:pointer;font-size:13px;color:#1c2733;text-align:left;font-family:inherit;}
+  #revPanel button:hover{background:#eef4fb;border-color:#2e75b6}
+  #revPanel button#btnClear{color:#c0392b}
+  #revPanel .hint{color:#9aa6b2;font-size:11px;margin-top:7px;line-height:1.5}
+</style>
+
+<script>
+(function(){
+  var KEY = 'math2nd_marks';
+
+  /* ---- 1. 在 MathJax 排版前抓取每个知识点的原文（含 LaTeX 源码），用于导出 ---- */
+  var SEC = {};   // id -> {title, body[]}
+  function cleanTitle(h){
+    var c = h.cloneNode(true);
+    var rm = c.querySelectorAll('.num,.badge,.mkbtn');
+    for(var i=0;i<rm.length;i++) rm[i].parentNode.removeChild(rm[i]);
+    return c.textContent.replace(/\s+/g,' ').trim();
+  }
+  var hs = document.querySelectorAll('h3.kp');
+  for(var i=0;i<hs.length;i++){
+    var h = hs[i], id = h.id, body = [], el = h.nextElementSibling;
+    while(el && el.tagName !== 'H3' && el.tagName !== 'H2'){
+      if(el.classList.contains('block')) body.push(el.textContent.replace(/\s+/g,' ').trim());
+      el = el.nextElementSibling;
+    }
+    SEC[id] = { title: cleanTitle(h), body: body };
+  }
+  window.__SEC = SEC;
+
+  /* ---- 2. 标记的读写 ---- */
+  var marks = [];
+  try{ marks = JSON.parse(localStorage.getItem(KEY)) || []; }catch(e){ marks = []; }
+
+  function sectionNodes(h3){
+    var out = [h3], el = h3.nextElementSibling;
+    while(el && el.tagName !== 'H3' && el.tagName !== 'H2'){
+      if(el.classList.contains('block')) out.push(el);
+      el = el.nextElementSibling;
+    }
+    return out;
+  }
+  function renderMark(id, on){
+    var h3 = document.getElementById(id); if(!h3) return;
+    var ns = sectionNodes(h3);
+    for(var i=0;i<ns.length;i++) ns[i].classList.toggle('hl', on);
+    h3.classList.toggle('marked', on);
+    var b = h3.querySelector('.mkbtn');
+    if(b) b.textContent = on ? '✓ 已标二轮' : '标二轮';
+  }
+  function save(){ localStorage.setItem(KEY, JSON.stringify(marks)); updateCnt(); }
+  function updateCnt(){ var c=document.getElementById('revCnt'); if(c) c.textContent = marks.length; }
+
+  /* ---- 3. 注入「标二轮」按钮 ---- */
+  for(var i=0;i<hs.length;i++){
+    (function(h){
+      var b = document.createElement('span');
+      b.className = 'mkbtn'; b.textContent = '标二轮';
+      b.addEventListener('click', function(ev){
+        ev.stopPropagation();
+        var id = h.id, idx = marks.indexOf(id);
+        if(idx >= 0){ marks.splice(idx,1); renderMark(id,false); }
+        else { marks.push(id); renderMark(id,true); }
+        save();
+      });
+      h.appendChild(b);
+    })(hs[i]);
+  }
+  for(var i=0;i<marks.length;i++) renderMark(marks[i], true);
+
+  /* ---- 4. 浮动面板 ---- */
+  var panel = document.createElement('div'); panel.id = 'revPanel';
+  panel.innerHTML =
+    '<div class="ttl">🔖 二轮复习笔记</div>' +
+    '<div class="cnt">已标记 <b id="revCnt">0</b> 个知识点</div>' +
+    '<button id="btnExport">📥 导出笔记 (.md)</button>' +
+    '<button id="btnList">📋 复制标题清单</button>' +
+    '<button id="btnClear">🗑 清空标记</button>' +
+    '<div class="hint">点每个知识点标题右侧的「标二轮」按钮即可标记，标记自动保存在本浏览器。</div>';
+  document.body.appendChild(panel);
+  updateCnt();
+
+  function buildMarkdown(){
+    var lines = ['# 数学科目三 · 二轮复习笔记','','> 共 ' + marks.length + ' 个知识点',''];
+    marks.forEach(function(id){
+      var s = SEC[id]; if(!s) return;
+      lines.push('## ' + s.title);
+      s.body.forEach(function(t){ lines.push(''); lines.push(t); });
+      lines.push('');
+    });
+    return lines.join('\n');
+  }
+  function download(name, text){
+    var blob = new Blob(['﻿' + text], {type:'text/markdown;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 200);
+  }
+  function noMark(){ alert('还没有标记任何知识点。先点各知识点标题右侧的「标二轮」按钮。'); }
+
+  document.getElementById('btnExport').addEventListener('click', function(){
+    if(!marks.length){ noMark(); return; }
+    download('数学科目三-二轮复习笔记.md', buildMarkdown());
+  });
+  document.getElementById('btnList').addEventListener('click', function(){
+    if(!marks.length){ noMark(); return; }
+    var list = marks.map(function(id){ return '- ' + (SEC[id] ? SEC[id].title : id); }).join('\n');
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(list).then(function(){ alert('已复制 ' + marks.length + ' 条标题到剪贴板'); })
+        .catch(function(){ window.prompt('自动复制失败，请手动复制：', list); });
+    } else {
+      window.prompt('请手动复制（当前浏览器不支持一键复制）：', list);
+    }
+  });
+  document.getElementById('btnClear').addEventListener('click', function(){
+    if(!marks.length) return;
+    if(window.confirm('确定清空全部二轮标记吗？')){
+      marks.forEach(function(id){ renderMark(id,false); });
+      marks = []; save();
+    }
+  });
+})();
+</script>
+</body>
+</html>
